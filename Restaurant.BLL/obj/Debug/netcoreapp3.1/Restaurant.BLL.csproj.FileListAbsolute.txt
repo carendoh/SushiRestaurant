@@ -1,0 +1,12 @@
+D:\C#\WebProjects\Restaurant\Restaurant.BLL\bin\Debug\netcoreapp3.1\Restaurant.BLL.deps.json
+D:\C#\WebProjects\Restaurant\Restaurant.BLL\bin\Debug\netcoreapp3.1\Restaurant.BLL.dll
+D:\C#\WebProjects\Restaurant\Restaurant.BLL\bin\Debug\netcoreapp3.1\Restaurant.BLL.pdb
+D:\C#\WebProjects\Restaurant\Restaurant.BLL\bin\Debug\netcoreapp3.1\Restaurant.DAL.dll
+D:\C#\WebProjects\Restaurant\Restaurant.BLL\bin\Debug\netcoreapp3.1\Restaurant.DAL.pdb
+D:\C#\WebProjects\Restaurant\Restaurant.BLL\obj\Debug\netcoreapp3.1\Restaurant.BLL.csprojAssemblyReference.cache
+D:\C#\WebProjects\Restaurant\Restaurant.BLL\obj\Debug\netcoreapp3.1\Restaurant.BLL.AssemblyInfoInputs.cache
+D:\C#\WebProjects\Restaurant\Restaurant.BLL\obj\Debug\netcoreapp3.1\Restaurant.BLL.AssemblyInfo.cs
+D:\C#\WebProjects\Restaurant\Restaurant.BLL\obj\Debug\netcoreapp3.1\Restaurant.BLL.csproj.CoreCompileInputs.cache
+D:\C#\WebProjects\Restaurant\Restaurant.BLL\obj\Debug\netcoreapp3.1\Restaurant.BLL.csproj.CopyComplete
+D:\C#\WebProjects\Restaurant\Restaurant.BLL\obj\Debug\netcoreapp3.1\Restaurant.BLL.dll
+D:\C#\WebProjects\Restaurant\Restaurant.BLL\obj\Debug\netcoreapp3.1\Restaurant.BLL.pdb
