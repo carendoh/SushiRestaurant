@@ -178,7 +178,6 @@ D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\Razor\_Imports.ra
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\BlazorUI.RazorTargetAssemblyInfo.cache
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\BlazorUI.csproj.CopyComplete
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\blazor\unlinked.output
-D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\9d3lSl2bz8KZbHjBOq9FtFfCmbNAndCo_RdU7DvbFow=.hash
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\99dseBOagY3mzu5Y8Eqm8gRI_o8QbbCp7R2Ew9bQ_5E=.hash
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\ZxXy75PYbzJxNfAc-SAP1nUYm4gt1jSaOpFnBb9m85M=.hash
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\BaZPMj95_YNe3G4ckTGD6szZFwZeA2MOHn91zTGKDeU=.hash
@@ -230,13 +229,11 @@ D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\_kkwUt5
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\rvTW0d54uLW0iDMAX30lpmr9f8uHoS3YYkEU5zNGhyc=.hash
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\LqwA2Rpm96Ualk0IhLZar87kfRCyKHzHTeTt2jYhm7M=.hash
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\czNf3btAeBW-vvID5LAfgcsNZ_GM3ssVuPaMflcg0rs=.hash
-D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\_K-S6qMy_VUns_my20u6zz9lAC-_UMHEXrCzmvfX80U=.hash
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\mPoqx7XczFHBWk3gRNn0hc9ekG1OvkKY4XiKRY5Mj5U=.hash
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\3S0qzYaBEKOBXarzVLNzNAFXlwJr6nI3lFlYUpQTPH8=.hash
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\UC-3Rm1NkdNdlIrzYARo_dO-HDlS5mhPxo0IQv7kma8=.hash
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\SPHS1EAPAcMFN4TEIUYl3FWtoCQTsNJch0XVGgok1eE=.hash
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\blazor\blazor.boot.json
-D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\j7mpnZI74jVhZOUp45f-cBZyjvosV0HCN53fDLHmYmU=.hash
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\compressed\_framework\_bin\BlazorUI.dll.gz
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Net.Http.Json.dll.gz
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Buffers.dll.gz
@@ -357,3 +354,6 @@ D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\staticwebassets\B
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\staticwebassets\BlazorUI.StaticWebAssets.xml
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\BlazorUI.dll
 D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\BlazorUI.pdb
+D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\LJYimOSpY3PmqdPvmaPdmzZwnuyv2MtLSmwkW8yJceU=.hash
+D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\vHzaowv_VTChU7vskVQ6B3uY8lRQw-FflfrFJ7cAofo=.hash
+D:\C#\WebProjects\Restaurant\BlazorUI\obj\Debug\netstandard2.1\integrity\PyVSB2CORw7VY4SOc5byQKNSslJxYG97nTLh6-w43co=.hash

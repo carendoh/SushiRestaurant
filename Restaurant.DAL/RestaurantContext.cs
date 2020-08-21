@@ -98,11 +98,51 @@ namespace Restaurant.DAL
                 .HasForeignKey(di => di.IngredientId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_Ingredients_DrinkIngredients");
+
             });
 
             modelBuilder.Entity<Ingredient>(entity =>
             {
                 entity.Property(e => e.Name).HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<UsersOrder>(entity =>
+            {
+                entity.HasOne(uo => uo.User)
+                .WithMany(u => u.UsersOrders)
+                .HasForeignKey(uo => uo.UserId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_UserOrder_User");
+            });
+
+            modelBuilder.Entity<DishOrder>(entity =>
+            {
+                entity.HasOne(DishOrder => DishOrder.UsersOrder)
+                .WithMany(UsersOrder => UsersOrder.DishOrders)
+                .HasForeignKey(DishOrder => DishOrder.UsersOrderId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_DishOrder_UsersOrder");
+
+                entity.HasOne(DishOrder => DishOrder.Dish)
+                .WithMany(Dish => Dish.DishOrders)
+                .HasForeignKey(DishOrder => DishOrder.DishId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_DishOrder_Dish");
+            });
+
+            modelBuilder.Entity<DrinkOrder>(entity =>
+            {
+                entity.HasOne(DrinkOrder => DrinkOrder.UsersOrder)
+                .WithMany(UsersOrder => UsersOrder.DrinkOrders)
+                .HasForeignKey(DrinkOrder => DrinkOrder.UsersOrderId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_DrinkOrder_UsersOrder");
+
+                entity.HasOne(DrinkOrder => DrinkOrder.Drink)
+                .WithMany(Drink => Drink.DrinkOrders)
+                .HasForeignKey(DrinkOrder => DrinkOrder.DrinkId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_DrinkOrder_Drink");
             });
 
             OnModelCreatingPartial(modelBuilder);
