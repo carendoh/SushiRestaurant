@@ -5,7 +5,6 @@ namespace Restaurant.DAL.Repositories.EntityRepositories
 {
     public class DishRepository : GenericRepository<Dish, int>, IDishRepository
     {
-        public DishRepository(RestaurantContext db)
-            : base(db) { }
+        public DishRepository(RestaurantContext db) : base(db) { }
     }
 }

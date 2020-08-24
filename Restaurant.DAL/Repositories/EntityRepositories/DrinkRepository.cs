@@ -8,7 +8,6 @@ namespace Restaurant.DAL.Repositories.EntityRepositories
 {
     public class DrinkRepository : GenericRepository<Drink, int>, IDrinkRepository
     {
-        public DrinkRepository(RestaurantContext db)
-            : base(db) { }
+        public DrinkRepository(RestaurantContext db) : base(db) { }
     }
 }

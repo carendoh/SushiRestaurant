@@ -40,6 +40,9 @@ namespace Restaurant.API
             services.AddTransient<IDishRepository, DishRepository>();
             services.AddTransient<IDrinkRepository, DrinkRepository>();
             services.AddTransient<IIngredientRepository, IngredientRepository>();
+            services.AddTransient<IUsersOrderRepository, UsersOrderRepository>();
+            services.AddTransient<IDishOrderRepository, DishOrderRepository>();
+            services.AddTransient<IDrinkOrderRepository, DrinkOrderRepository>();
             #endregion
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();

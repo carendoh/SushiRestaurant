@@ -7,42 +7,42 @@ namespace Restaurant.DAL
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly ICategoryRepository categoryRepository;
-        private readonly IDishRepository dishRepository;
-        private readonly IDrinkRepository drinkRepository;
-        private readonly IIngredientRepository ingredientRepository;
-
-        private readonly UserManager<User> userManager;
-        private readonly SignInManager<User> signInManager;
-        private readonly RoleManager<IdentityRole> roleManager;
-
         public UnitOfWork(
-            ICategoryRepository categoryRepository,
-            IDishRepository dishRepository,
-            IDrinkRepository drinkRepository,
-            IIngredientRepository ingredientRepository,
+            ICategoryRepository CategoryRepository,
+            IDishRepository DishRepository,
+            IDrinkRepository DrinkRepository,
+            IIngredientRepository IngredientRepository,
+            IUsersOrderRepository UsersOrderRepository,
+            IDishOrderRepository DishOrderRepository,
+            IDrinkOrderRepository DrinkOrderRepository,
 
-            UserManager<User> userManager,
-            SignInManager<User> signInManager,
-            RoleManager<IdentityRole> roleManager)
+            UserManager<User> UserManager,
+            SignInManager<User> SignInManager,
+            RoleManager<IdentityRole> RoleManager)
         {
-            this.categoryRepository = categoryRepository;
-            this.dishRepository = dishRepository;
-            this.drinkRepository = drinkRepository;
-            this.ingredientRepository = ingredientRepository;
+            this.CategoryRepository = CategoryRepository;
+            this.DishRepository = DishRepository;
+            this.DrinkRepository = DrinkRepository;
+            this.IngredientRepository = IngredientRepository;
+            this.UsersOrderRepository = UsersOrderRepository;
+            this.DishOrderRepository = DishOrderRepository;
+            this.DrinkOrderRepository = DrinkOrderRepository;
 
-            this.userManager = userManager;
-            this.signInManager = signInManager;
-            this.roleManager = roleManager;
+            this.UserManager = UserManager;
+            this.SignInManager = SignInManager;
+            this.RoleManager = RoleManager;
         }
 
-        public ICategoryRepository CategoryRepository => categoryRepository;
-        public IDishRepository DishRepository => dishRepository;
-        public IDrinkRepository DrinkRepository => drinkRepository;
-        public IIngredientRepository IngredientRepository => ingredientRepository;
+        public ICategoryRepository CategoryRepository { get; }
+        public IDishRepository DishRepository { get; }
+        public IDrinkRepository DrinkRepository { get; }
+        public IIngredientRepository IngredientRepository { get; }
+        public IUsersOrderRepository UsersOrderRepository { get; }
+        public IDishOrderRepository DishOrderRepository { get; }
+        public IDrinkOrderRepository DrinkOrderRepository { get; }
 
-        public UserManager<User> UserManager => userManager;
-        public SignInManager<User> SignInManager => signInManager;
-        public RoleManager<IdentityRole> RoleManager => roleManager;
+        public UserManager<User> UserManager { get; }
+        public SignInManager<User> SignInManager { get; }
+        public RoleManager<IdentityRole> RoleManager { get; }
     }
 }

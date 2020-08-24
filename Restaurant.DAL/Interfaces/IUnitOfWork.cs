@@ -10,6 +10,9 @@ namespace Restaurant.DAL.Interfaces
         IDishRepository DishRepository { get; }
         IDrinkRepository DrinkRepository { get; }
         IIngredientRepository IngredientRepository { get; }
+        IUsersOrderRepository UsersOrderRepository { get; }
+        IDishOrderRepository DishOrderRepository { get; }
+        IDrinkOrderRepository DrinkOrderRepository { get; }
 
         UserManager<User> UserManager { get; }
         SignInManager<User> SignInManager { get; }
