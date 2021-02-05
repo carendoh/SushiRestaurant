@@ -1,34 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\WebProjects\\Restaurant\\Restaurant.API\\Restaurant.API.csproj": {}
+    "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.API\\Restaurant.API.csproj": {}
   },
   "projects": {
-    "D:\\C#\\WebProjects\\Restaurant\\Restaurant.API\\Restaurant.API.csproj": {
+    "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.API\\Restaurant.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.API\\Restaurant.API.csproj",
+        "projectUniqueName": "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.API\\Restaurant.API.csproj",
         "projectName": "Restaurant.API",
-        "projectPath": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.API\\Restaurant.API.csproj",
+        "projectPath": "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.API\\Restaurant.API.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.API\\obj\\",
+        "outputPath": "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj": {
-                "projectPath": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj"
+              "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj": {
+                "projectPath": "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj"
               }
             }
           }
@@ -40,13 +41,14 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[5.0.2, )"
             }
           },
           "imports": [
@@ -67,35 +69,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj": {
+    "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj",
+        "projectUniqueName": "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj",
         "projectName": "Restaurant.BLL",
-        "projectPath": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj",
+        "projectPath": "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\obj\\",
+        "outputPath": "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj": {
-                "projectPath": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj"
+              "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj": {
+                "projectPath": "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj"
               }
             }
           }
@@ -107,19 +110,20 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[10.0.0, )"
+              "version": "[10.1.1, )"
             },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[8.0.1, )"
+              "version": "[8.1.0, )"
             },
             "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[9.1.3, )"
+              "version": "[9.5.0, )"
             }
           },
           "imports": [
@@ -140,32 +144,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj": {
+    "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj",
+        "projectUniqueName": "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj",
         "projectName": "Restaurant.DAL",
-        "projectPath": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj",
+        "projectPath": "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\obj\\",
+        "outputPath": "D:\\#Programming\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -176,7 +181,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
@@ -184,15 +190,15 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[5.0.2, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[5.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[5.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer.Design": {
               "target": "Package",
@@ -202,7 +208,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[5.0.2, )"
             }
           },
           "imports": [
@@ -220,7 +226,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
