@@ -1,13 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.Collections.Generic;
-
-namespace Restaurant.DAL.Entities
+﻿namespace Restaurant.DAL
 {
-    public class User : IdentityUser
+    public class User
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-
-        public IEnumerable<UsersOrder> UsersOrders { get; set; }
+        
     }
 }

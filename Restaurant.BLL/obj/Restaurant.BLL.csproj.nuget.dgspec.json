@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj": {}
+    "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\Restaurant.BLL\\Restaurant.BLL.csproj": {}
   },
   "projects": {
-    "D:\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj": {
+    "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\Restaurant.BLL\\Restaurant.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj",
+        "projectUniqueName": "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\Restaurant.BLL\\Restaurant.BLL.csproj",
         "projectName": "Restaurant.BLL",
-        "projectPath": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\Restaurant.BLL.csproj",
+        "projectPath": "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\Restaurant.BLL\\Restaurant.BLL.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.BLL\\obj\\",
+        "outputPath": "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\Restaurant.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -26,9 +26,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj": {
-                "projectPath": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj"
+              "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\Restaurant.DAL\\Restaurant.DAL.csproj": {
+                "projectPath": "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\Restaurant.DAL\\Restaurant.DAL.csproj"
               }
             }
           }
@@ -41,6 +42,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -56,18 +58,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj": {
+    "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\Restaurant.DAL\\Restaurant.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj",
+        "projectUniqueName": "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\Restaurant.DAL\\Restaurant.DAL.csproj",
         "projectName": "Restaurant.DAL",
-        "projectPath": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\Restaurant.DAL.csproj",
+        "projectPath": "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\Restaurant.DAL\\Restaurant.DAL.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\WebProjects\\Restaurant\\Restaurant.DAL\\obj\\",
+        "outputPath": "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\Restaurant.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,6 +84,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -93,6 +96,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
@@ -136,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

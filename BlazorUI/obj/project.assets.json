@@ -1642,11 +1642,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\WebProjects\\Restaurant\\BlazorUI\\BlazorUI.csproj",
+      "projectUniqueName": "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\BlazorUI\\BlazorUI.csproj",
       "projectName": "BlazorUI",
-      "projectPath": "D:\\C#\\WebProjects\\Restaurant\\BlazorUI\\BlazorUI.csproj",
+      "projectPath": "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\BlazorUI\\BlazorUI.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\WebProjects\\Restaurant\\BlazorUI\\obj\\",
+      "outputPath": "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\BlazorUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1661,6 +1661,7 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "projectReferences": {}
         }
       },
@@ -1672,6 +1673,7 @@
     },
     "frameworks": {
       "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
         "dependencies": {
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
@@ -1707,7 +1709,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

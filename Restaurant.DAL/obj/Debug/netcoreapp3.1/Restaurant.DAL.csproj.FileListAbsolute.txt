@@ -18,3 +18,15 @@ D:\C#\WebProjects\Restaurant\Restaurant.DAL\obj\Debug\netcoreapp3.1\Restaurant.D
 D:\C#\WebProjects\Restaurant\Restaurant.DAL\obj\Debug\netcoreapp3.1\Restaurant.DAL.pdb
 D:\C#\WebProjects\Restaurant\Restaurant.DAL\obj\Debug\netcoreapp3.1\Restaurant.DAL.genruntimeconfig.cache
 D:\C#\WebProjects\Restaurant\Restaurant.DAL\obj\Debug\netcoreapp3.1\Restaurant.DAL.csprojAssemblyReference.cache
+D:\Programming\C#\WebProjects\SushiRestaurant\Restaurant.DAL\bin\Debug\netcoreapp3.1\Restaurant.DAL.deps.json
+D:\Programming\C#\WebProjects\SushiRestaurant\Restaurant.DAL\bin\Debug\netcoreapp3.1\Restaurant.DAL.runtimeconfig.json
+D:\Programming\C#\WebProjects\SushiRestaurant\Restaurant.DAL\bin\Debug\netcoreapp3.1\Restaurant.DAL.runtimeconfig.dev.json
+D:\Programming\C#\WebProjects\SushiRestaurant\Restaurant.DAL\bin\Debug\netcoreapp3.1\Restaurant.DAL.dll
+D:\Programming\C#\WebProjects\SushiRestaurant\Restaurant.DAL\bin\Debug\netcoreapp3.1\Restaurant.DAL.pdb
+D:\Programming\C#\WebProjects\SushiRestaurant\Restaurant.DAL\obj\Debug\netcoreapp3.1\Restaurant.DAL.csprojAssemblyReference.cache
+D:\Programming\C#\WebProjects\SushiRestaurant\Restaurant.DAL\obj\Debug\netcoreapp3.1\Restaurant.DAL.AssemblyInfoInputs.cache
+D:\Programming\C#\WebProjects\SushiRestaurant\Restaurant.DAL\obj\Debug\netcoreapp3.1\Restaurant.DAL.AssemblyInfo.cs
+D:\Programming\C#\WebProjects\SushiRestaurant\Restaurant.DAL\obj\Debug\netcoreapp3.1\Restaurant.DAL.csproj.CoreCompileInputs.cache
+D:\Programming\C#\WebProjects\SushiRestaurant\Restaurant.DAL\obj\Debug\netcoreapp3.1\Restaurant.DAL.dll
+D:\Programming\C#\WebProjects\SushiRestaurant\Restaurant.DAL\obj\Debug\netcoreapp3.1\Restaurant.DAL.pdb
+D:\Programming\C#\WebProjects\SushiRestaurant\Restaurant.DAL\obj\Debug\netcoreapp3.1\Restaurant.DAL.genruntimeconfig.cache

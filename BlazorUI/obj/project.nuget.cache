@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uPHIjiTp7TZiyTA/8Zr1cnYrd/66zyRztpWgwF9mZp7DEKb7riZBXZYPOyFdbjDPKz65l+KZBbT3gtkzd/FOjA==",
+  "dgSpecHash": "oYdOUhvrxgAVbX5XnPfh6m5A61jBvtXbZxK31vZYuV91TLm07vEjg1a/MWtZXGVUl/xmeV/QR2WPejKvcA92Dw==",
   "success": true,
-  "projectFilePath": "D:\\C#\\WebProjects\\Restaurant\\BlazorUI\\BlazorUI.csproj",
+  "projectFilePath": "D:\\Programming\\C#\\WebProjects\\SushiRestaurant\\BlazorUI\\BlazorUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.6\\microsoft.aspnetcore.authorization.3.1.6.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.6\\microsoft.aspnetcore.components.3.1.6.nupkg.sha512",

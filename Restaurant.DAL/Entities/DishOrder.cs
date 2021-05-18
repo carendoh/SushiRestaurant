@@ -1,16 +1,17 @@
-﻿using Restaurant.DAL.Interfaces;
-
-namespace Restaurant.DAL.Entities
+﻿namespace Restaurant.DAL.Entities
 {
-    public class DishOrder : IEntity<int>
+    public class DishOrder
     {
         public int Id { get; set; }
+        
         public int Number { get; set; }
-
-        public int UsersOrderId { get; set; }
-        public UsersOrder UsersOrder { get; set; }
-
+        
+        public int OrderId { get; set; }
+        
         public int DishId { get; set; }
-        public Dish Dish { get; set; }
+
+        public virtual Dish Dish { get; set; }
+        
+        public virtual Order Order { get; set; }
     }
 }
