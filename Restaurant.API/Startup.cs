@@ -13,6 +13,8 @@ using Restaurant.BLL.Services;
 using Restaurant.DAL;
 using Restaurant.DAL.Entities;
 using Restaurant.API.Mapping;
+using StackExchange.Redis.Extensions.Core.Configuration;
+using StackExchange.Redis.Extensions.Newtonsoft;
 
 namespace Restaurant.API
 {
@@ -40,9 +42,7 @@ namespace Restaurant.API
             });
 
             #region Services
-
             services.AddTransient<IDishService, DishService>();
-
             #endregion
 
             #region Identity
@@ -85,6 +85,9 @@ namespace Restaurant.API
             });
 
             #endregion
+
+            services.AddStackExchangeRedisExtensions<NewtonsoftSerializer>(_ =>
+                Configuration.GetSection("Redis").Get<RedisConfiguration>());
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

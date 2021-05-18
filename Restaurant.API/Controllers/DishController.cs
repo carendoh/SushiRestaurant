@@ -1,28 +1,30 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Restaurant.BLL.DTOs;
 using Restaurant.BLL.Interfaces.IServices;
+using StackExchange.Redis.Extensions.Core.Abstractions;
 
 namespace Restaurant.API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class DishController : ControllerBase
     {
-        private readonly ILogger<DishController> _logger;
+        private readonly IRedisDatabase _redisDatabase;
         private readonly IDishService _dishService;
 
         public DishController(
-            ILogger<DishController> logger,
+            IRedisDatabase redisDatabase,
             IDishService dishService)
         {
-            _logger = logger;
+            _redisDatabase = redisDatabase;
             _dishService = dishService;
         }
 
         [HttpPost]
+        [Route("[action]")]
         public async Task<ActionResult> Add(DishDto dish)
         {
             await _dishService.AddAsync(dish);
@@ -31,6 +33,7 @@ namespace Restaurant.API.Controllers
         }
 
         [HttpDelete]
+        [Route("[action]")]
         public async Task<ActionResult> DeleteById(int id)
         {
             await _dishService.DeleteAsync(id);
@@ -38,16 +41,28 @@ namespace Restaurant.API.Controllers
             return Ok();
         }
 
-        [HttpGet("All")]
+        [HttpGet]
+        [Route("All")]
         public async Task<ActionResult<IEnumerable<DishDto>>> GetAll()
         {
-            _logger.LogInformation("Get all executed");
-            var dishes = await _dishService.GetAllAsync();
+            const string key = "AllDishes";
+
+            var dishes = await _redisDatabase.GetAsync<IEnumerable<DishDto>>(key);
+
+            if (dishes != null)
+            {
+                return Ok(dishes);
+            }
+
+            dishes = await _dishService.GetAllAsync();
+
+            await _redisDatabase.AddAsync(key, dishes,DateTimeOffset.Now.AddMinutes(2));
 
             return Ok(dishes);
         }
 
-        [HttpGet("{id:int}/Get")]
+        [HttpGet]
+        [Route("{id:int}/Get")]
         public async Task<ActionResult<DishDto>> GetById(int id)
         {
             var dish = await _dishService.GetByIdAsync(id);
@@ -56,6 +71,7 @@ namespace Restaurant.API.Controllers
         }
 
         [HttpPut]
+        [Route("[action]")]
         public async Task<ActionResult> Update(DishDto dish)
         {
             await _dishService.UpdateAsync(dish);
