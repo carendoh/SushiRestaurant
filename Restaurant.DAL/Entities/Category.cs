@@ -6,8 +6,9 @@ namespace Restaurant.DAL.Entities
     public class Category : IEntity<int>
     {
         public int Id { get; set; }
+        
         public string Name { get; set; }
 
-        public IEnumerable<Dish> Dishes { get; set; }
+        public virtual IEnumerable<Dish> Dishes { get; set; }
     }
 }

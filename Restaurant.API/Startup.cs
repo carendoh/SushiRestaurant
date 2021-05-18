@@ -1,22 +1,18 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
+using Restaurant.BLL.Interfaces.IServices;
+using Restaurant.BLL.Services;
 using Restaurant.DAL;
 using Restaurant.DAL.Entities;
-using Restaurant.DAL.Interfaces;
-using Restaurant.DAL.Interfaces.IEntityRepositories;
-using Restaurant.DAL.Repositories.EntityRepositories;
+using Restaurant.API.Mapping;
 
 namespace Restaurant.API
 {
@@ -29,25 +25,28 @@ namespace Restaurant.API
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<RestaurantContext>(opts => opts.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<RestaurantContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddAutoMapper(typeof(DishMapperProfile).GetTypeInfo().Assembly);
+            
             services.AddControllers();
 
-            #region Repositories
-            services.AddTransient<ICategoryRepository, CategoryRepository>();
-            services.AddTransient<IDishRepository, DishRepository>();
-            services.AddTransient<IDrinkRepository, DrinkRepository>();
-            services.AddTransient<IIngredientRepository, IngredientRepository>();
-            services.AddTransient<IUsersOrderRepository, UsersOrderRepository>();
-            services.AddTransient<IDishOrderRepository, DishOrderRepository>();
-            services.AddTransient<IDrinkOrderRepository, DrinkOrderRepository>();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo {Title = "Restaurant.API", Version = "v1"});
+            });
+
+            #region Services
+
+            services.AddTransient<IDishService, DishService>();
+
             #endregion
 
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
-
             #region Identity
+
             services.AddIdentity<User, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<RestaurantContext>();
 
@@ -71,7 +70,7 @@ namespace Restaurant.API
 
                 // User settings.
                 options.User.AllowedUserNameCharacters =
-                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+                    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
             });
 
             services.ConfigureApplicationCookie(options =>
@@ -84,15 +83,17 @@ namespace Restaurant.API
                 options.AccessDeniedPath = "/Identity/Account/AccessDenied";
                 options.SlidingExpiration = true;
             });
+
             #endregion
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Restaurant.API v1"));
             }
 
             app.UseHttpsRedirection();
@@ -101,10 +102,7 @@ namespace Restaurant.API
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }
