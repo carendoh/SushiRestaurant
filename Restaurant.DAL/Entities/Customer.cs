@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Restaurant.DAL.Interfaces;
 
 namespace Restaurant.DAL.Entities
 {
-    public class Customer
+    public class Customer : IEntity<int>
     {
         public int Id { get; set; }
         
@@ -17,9 +18,9 @@ namespace Restaurant.DAL.Entities
         public string PhoneNumber { get; set; }
         
         public int? UserId { get; set; }
-
-        public virtual IEnumerable<User> Users { get; set; }
         
-        public virtual IEnumerable<Order> Orders { get; set; }
+        public User User { get; set; }
+
+        public IEnumerable<Order> Orders { get; set; }
     }
 }

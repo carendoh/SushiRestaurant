@@ -1,6 +1,8 @@
-﻿namespace Restaurant.DAL.Entities
+﻿using Restaurant.DAL.Interfaces;
+
+namespace Restaurant.DAL.Entities
 {
-    public class DishOrder
+    public class DishOrder : IEntity<int>
     {
         public int Id { get; set; }
         

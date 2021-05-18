@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Restaurant.DAL.Interfaces;
 
 namespace Restaurant.DAL.Entities
 {
-    public class Category
+    public class Category : IEntity<int>
     {
         public int Id { get; set; }
         

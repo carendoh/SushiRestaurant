@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using Restaurant.DAL.Interfaces;
 
 namespace Restaurant.DAL.Entities
 {
-    public class Order
+    public class Order : IEntity<int>
     {
         public int Id { get; set; }
         
