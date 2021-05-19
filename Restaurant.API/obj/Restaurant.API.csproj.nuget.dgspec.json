@@ -50,6 +50,14 @@
               "target": "Package",
               "version": "[5.0.5, )"
             },
+            "StackExchange.Redis.Extensions.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "StackExchange.Redis.Extensions.Newtonsoft": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.1.4, )"
