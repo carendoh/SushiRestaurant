@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Restaurant.DAL.Interfaces;
 using Restaurant.DAL.Sql.EF;
 
-namespace Restaurant.DAL.Sql.Repositories
+namespace Restaurant.DAL.Sql
 {
     public class GenericRepository<TEntity, T> : IGenericRepository<TEntity, T> where TEntity : class, IEntity<T>
     {

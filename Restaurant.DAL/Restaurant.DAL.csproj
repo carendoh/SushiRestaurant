@@ -19,8 +19,4 @@
     <PackageReference Include="MongoDB.Driver" Version="2.12.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Sql" />
-  </ItemGroup>
-
 </Project>
