@@ -11,7 +11,7 @@ namespace Restaurant.DAL.Interfaces
 
         Task DeleteAsync(TEntity entity);
 
-        Task<TEntity> GetAsync(T id);
+        Task<TEntity> GetByIdAsync(T id);
 
         Task<IEnumerable<TEntity>> GetAllAsync();
 

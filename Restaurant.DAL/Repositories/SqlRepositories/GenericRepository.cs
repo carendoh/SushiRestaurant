@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +8,9 @@ namespace Restaurant.DAL.Repositories.SqlRepositories
 {
     public class GenericRepository<TEntity, T> : IGenericRepository<TEntity, T> where TEntity : class, IEntity<T>
     {
-        protected readonly RestaurantContext Db;
+        protected RestaurantContext Db { get; }
+
+        protected DbSet<TEntity> Entities => Db.Set<TEntity>();
 
         protected GenericRepository(RestaurantContext db)
         {
@@ -16,34 +19,51 @@ namespace Restaurant.DAL.Repositories.SqlRepositories
 
         public async Task AddAsync(TEntity entity)
         {
-            await Db.Set<TEntity>().AddAsync(entity);
+            if (entity == null)
+            {
+                throw new ArgumentNullException(nameof(entity));
+            }
+            
+            await Entities.AddAsync(entity);
             await Db.SaveChangesAsync();
         }
 
         public async Task<bool> AnyAsync(T id)
         {
-            return await Db.Set<TEntity>().AnyAsync();
+            return await Entities.AnyAsync();
         }
 
         public async Task DeleteAsync(TEntity entity)
         {
-            Db.Set<TEntity>().Remove(entity);
+            if (entity == null)
+            {
+                throw new ArgumentNullException(nameof(entity));
+            }
+            
+            Entities.Remove(entity);
             await Db.SaveChangesAsync();
         }
 
-        public async Task<TEntity> GetAsync(T id)
+        public async Task<TEntity> GetByIdAsync(T id)
         {
-           return await Db.Set<TEntity>().FirstOrDefaultAsync(e => e.Id.Equals(id));
+           return await Entities.AsNoTracking()
+               .FirstOrDefaultAsync(e => e.Id.Equals(id));
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
-            return await Db.Set<TEntity>().ToListAsync();
+            return await Entities.AsNoTracking()
+                .ToListAsync();
         }
 
         public async Task UpdateAsync(TEntity entity)
         {
-            Db.Set<TEntity>().Update(entity);
+            if (entity == null)
+            {
+                throw new ArgumentNullException(nameof(entity));
+            }
+            
+            Entities.Update(entity);
             await Db.SaveChangesAsync();
         }
     }
