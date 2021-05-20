@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using MongoDB.Driver;
 using Restaurant.DAL.Interfaces;
 
-namespace Restaurant.DAL.MongoDb.Repositories
+namespace Restaurant.DAL.MongoDb
 {
     public class GenericRepository<TEntity, T> : IGenericRepository<TEntity, T> where TEntity : class, IEntity<T>
     {
