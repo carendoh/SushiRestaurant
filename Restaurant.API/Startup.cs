@@ -14,6 +14,9 @@ using Restaurant.DAL;
 using Restaurant.DAL.Entities;
 using Restaurant.API.Mapping;
 using Restaurant.DAL.EF;
+using Restaurant.DAL.Interfaces;
+using Restaurant.DAL.Interfaces.IRepositories;
+using Restaurant.DAL.Repositories.SqlRepositories;
 using StackExchange.Redis.Extensions.Core.Configuration;
 using StackExchange.Redis.Extensions.Newtonsoft;
 
@@ -41,6 +44,15 @@ namespace Restaurant.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "Restaurant.API", Version = "v1"});
             });
+
+            #region Repositories
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
+            services.AddTransient<IDishRepository, DishRepository>();
+            services.AddTransient<IDrinkRepository, DrinkRepository>();
+            services.AddTransient<IIngredientRepository, IngredientRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
+            #endregion
 
             #region Services
             services.AddTransient<IDishService, DishService>();
@@ -86,6 +98,8 @@ namespace Restaurant.API
             });
 
             #endregion
+
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             services.AddStackExchangeRedisExtensions<NewtonsoftSerializer>(_ =>
                 Configuration.GetSection("Redis").Get<RedisConfiguration>());
