@@ -5,11 +5,16 @@ namespace Restaurant.DAL.Interfaces
 {
     public interface IGenericRepository<TEntity, T> where TEntity : class, IEntity<T>
     {
-        Task Add(TEntity entity);
-        Task<bool> Any(T id);
-        Task Delete(TEntity entity);
-        Task<TEntity> Get(T id);
-        Task<IEnumerable<TEntity>> GetAll();
-        Task Update(TEntity entity);
+        Task AddAsync(TEntity entity);
+
+        Task<bool> AnyAsync(T id);
+
+        Task DeleteAsync(TEntity entity);
+
+        Task<TEntity> GetAsync(T id);
+
+        Task<IEnumerable<TEntity>> GetAllAsync();
+
+        Task UpdateAsync(TEntity entity);
     }
 }

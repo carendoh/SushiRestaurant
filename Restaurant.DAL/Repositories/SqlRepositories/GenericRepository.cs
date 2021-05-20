@@ -8,40 +8,40 @@ namespace Restaurant.DAL.Repositories.SqlRepositories
     public class GenericRepository<TEntity, T> : IGenericRepository<TEntity, T> where TEntity : class, IEntity<T>
     {
         protected readonly RestaurantContext Db;
-        
-        public GenericRepository(RestaurantContext db)
+
+        protected GenericRepository(RestaurantContext db)
         {
             Db = db;
         }
-        
-        public async Task Add(TEntity entity)
+
+        public async Task AddAsync(TEntity entity)
         {
             await Db.Set<TEntity>().AddAsync(entity);
             await Db.SaveChangesAsync();
         }
 
-        public async Task<bool> Any(T id)
+        public async Task<bool> AnyAsync(T id)
         {
             return await Db.Set<TEntity>().AnyAsync();
         }
 
-        public async Task Delete(TEntity entity)
+        public async Task DeleteAsync(TEntity entity)
         {
             Db.Set<TEntity>().Remove(entity);
             await Db.SaveChangesAsync();
         }
 
-        public async Task<TEntity> Get(T id)
+        public async Task<TEntity> GetAsync(T id)
         {
            return await Db.Set<TEntity>().FirstOrDefaultAsync(e => e.Id.Equals(id));
         }
 
-        public async Task<IEnumerable<TEntity>> GetAll()
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
             return await Db.Set<TEntity>().ToListAsync();
         }
 
-        public async Task Update(TEntity entity)
+        public async Task UpdateAsync(TEntity entity)
         {
             Db.Set<TEntity>().Update(entity);
             await Db.SaveChangesAsync();
