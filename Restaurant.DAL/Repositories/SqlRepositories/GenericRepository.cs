@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Restaurant.DAL.EF;
 using Restaurant.DAL.Interfaces;
 
 namespace Restaurant.DAL.Repositories.SqlRepositories

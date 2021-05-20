@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Restaurant.DAL;
+using Restaurant.DAL.EF;
 
 namespace Restaurant.DAL.Migrations
 {

@@ -13,6 +13,7 @@ using Restaurant.BLL.Services;
 using Restaurant.DAL;
 using Restaurant.DAL.Entities;
 using Restaurant.API.Mapping;
+using Restaurant.DAL.EF;
 using StackExchange.Redis.Extensions.Core.Configuration;
 using StackExchange.Redis.Extensions.Newtonsoft;
 

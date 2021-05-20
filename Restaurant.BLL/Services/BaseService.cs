@@ -3,6 +3,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Restaurant.BLL.Interfaces.IServices;
 using Restaurant.DAL;
+using Restaurant.DAL.EF;
 
 namespace Restaurant.BLL.Services
 {
