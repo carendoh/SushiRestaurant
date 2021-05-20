@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Restaurant.DAL.Entities;
 
-namespace Restaurant.DAL.EF
+namespace Restaurant.DAL.Sql.EF
 {
     public class RestaurantContext : IdentityDbContext<User>
     {

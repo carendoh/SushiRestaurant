@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Restaurant.DAL.Entities;
 
-namespace Restaurant.DAL.EF
+namespace Restaurant.DAL.Sql.EF
 {
     public static class Initializer
     {

@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Restaurant.DAL.EF;
 using Restaurant.DAL.Interfaces;
+using Restaurant.DAL.Sql.EF;
 
-namespace Restaurant.DAL.Repositories.SqlRepositories
+namespace Restaurant.DAL.Sql.Repositories
 {
     public class GenericRepository<TEntity, T> : IGenericRepository<TEntity, T> where TEntity : class, IEntity<T>
     {

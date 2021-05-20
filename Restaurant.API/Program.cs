@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Restaurant.DAL;
-using Restaurant.DAL.EF;
+using Restaurant.DAL.Sql.EF;
 
 namespace Restaurant.API
 {
