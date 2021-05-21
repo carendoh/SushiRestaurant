@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Restaurant.BLL.DTOs;
-using Restaurant.DAL.Entities;
+using Restaurant.DAL.Sql.Entities;
 
 namespace Restaurant.BLL.Interfaces.IServices
 {

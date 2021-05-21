@@ -1,6 +1,6 @@
-using Restaurant.DAL.Entities;
 using Restaurant.DAL.Interfaces.IRepositories;
 using Restaurant.DAL.Sql.EF;
+using Restaurant.DAL.Sql.Entities;
 
 namespace Restaurant.DAL.Sql.Repositories
 {

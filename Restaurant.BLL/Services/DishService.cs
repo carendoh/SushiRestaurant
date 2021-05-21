@@ -4,12 +4,8 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Restaurant.BLL.DTOs;
 using Restaurant.BLL.Interfaces.IServices;
-using Restaurant.DAL;
-using Restaurant.DAL.Entities;
-using System.Linq;
-using System.Text.Json;
-using Newtonsoft.Json.Linq;
 using Restaurant.DAL.Sql.EF;
+using Restaurant.DAL.Sql.Entities;
 
 namespace Restaurant.BLL.Services
 {

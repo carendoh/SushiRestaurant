@@ -1,9 +1,13 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.Reflection;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Restaurant.DAL.MongoDb.Interfaces;
+using Restaurant.DAL.MongoDb.Repositories;
 using Restaurant.Grpc.Controllers;
+using Restaurant.Grpc.Mapping;
 
 namespace Restaurant.Grpc
 {
@@ -14,6 +18,14 @@ namespace Restaurant.Grpc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddGrpc();
+            services.AddAutoMapper(typeof(DishMapperProfile).GetTypeInfo().Assembly);
+            
+            #region Repositories
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IDishRepository, DishRepository>();
+            services.AddTransient<IDrinkRepository, DrinkRepository>();
+            services.AddTransient<IIngredientRepository, IngredientRepository>();
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

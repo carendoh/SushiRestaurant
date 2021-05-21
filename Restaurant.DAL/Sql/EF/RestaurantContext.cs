@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Restaurant.DAL.Entities;
+using Restaurant.DAL.Sql.Entities;
 
 namespace Restaurant.DAL.Sql.EF
 {

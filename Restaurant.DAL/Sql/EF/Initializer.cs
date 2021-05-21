@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using Restaurant.DAL.Entities;
+using Restaurant.DAL.Sql.Entities;
 
 namespace Restaurant.DAL.Sql.EF
 {

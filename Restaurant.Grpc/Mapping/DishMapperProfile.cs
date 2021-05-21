@@ -1,14 +1,14 @@
-﻿using AutoMapper;
-using Restaurant.BLL.DTOs;
+using AutoMapper;
 using Restaurant.DAL.Sql.Entities;
+using Restaurant.Grpc.GrpcServices;
 
-namespace Restaurant.API.Mapping
+namespace Restaurant.Grpc.Mapping
 {
     public class DishMapperProfile : Profile
     {
         public DishMapperProfile()
         {
-            CreateMap<Dish, DishDto>().ReverseMap();
+            CreateMap<Dish, DishProto>().ReverseMap();
         }
     }
 }

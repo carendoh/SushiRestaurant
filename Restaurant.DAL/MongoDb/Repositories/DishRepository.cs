@@ -1,6 +1,6 @@
-using Restaurant.DAL.Entities;
 using Restaurant.DAL.Interfaces;
-using Restaurant.DAL.Interfaces.IRepositories;
+using Restaurant.DAL.MongoDb.Interfaces;
+using Restaurant.DAL.MongoDb.Entities;
 
 namespace Restaurant.DAL.MongoDb.Repositories
 {

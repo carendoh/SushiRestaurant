@@ -1,12 +1,15 @@
 ﻿using System.Collections.Generic;
+using MongoDB.Bson.Serialization.Attributes;
 using Restaurant.DAL.Interfaces;
 
-namespace Restaurant.DAL.Entities
+namespace Restaurant.DAL.MongoDb.Entities
 {
     public class Dish : IEntity<int>
     {
+        [BsonId]
         public int Id { get; set; }
 
+        [BsonRequired]
         public string Name { get; set; }
 
         public double Price { get; set; }
@@ -21,11 +24,9 @@ namespace Restaurant.DAL.Entities
 
         public int? CategoryId { get; set; }
 
+        public Category Category { get; set; }
 
-        public virtual Category Category { get; set; }
+        public IEnumerable<Ingredient> Ingredients { get; set; }
 
-        public virtual IEnumerable<Ingredient> Ingredients { get; set; }
-
-        public virtual IEnumerable<DishOrder> DishOrders { get; set; }
     }
 }

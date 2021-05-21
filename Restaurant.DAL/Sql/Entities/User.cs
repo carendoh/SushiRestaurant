@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Restaurant.DAL.Interfaces;
 
-namespace Restaurant.DAL.Entities
+namespace Restaurant.DAL.Sql.Entities
 {
     public class User : IdentityUser, IEntity<string>
     {

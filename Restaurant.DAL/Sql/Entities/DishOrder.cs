@@ -1,6 +1,6 @@
 ﻿using Restaurant.DAL.Interfaces;
 
-namespace Restaurant.DAL.Entities
+namespace Restaurant.DAL.Sql.Entities
 {
     public class DishOrder : IEntity<int>
     {

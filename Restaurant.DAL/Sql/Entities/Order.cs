@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Restaurant.DAL.Interfaces;
 
-namespace Restaurant.DAL.Entities
+namespace Restaurant.DAL.Sql.Entities
 {
     public class Order : IEntity<int>
     {
