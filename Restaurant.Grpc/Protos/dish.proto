@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option csharp_namespace = "Restaurant.Grpc.DishGrpcService";
+
+message DishProto {
+  int32 Id = 1;
+  string Name = 2;
+  double Price = 3;
+  string Description = 4;
+  double Mass = 5;
+  bool IsVegan = 6;
+  bool IsPublished = 7;
+}
+
+message CategoryProto {
+  int32 Id = 1;
+  string Name = 2;
+  repeated DishProto Dishes = 3;
+  
+}
+
+message IngredientProto {
+  
+}
+
+service DishService {
+  
+}
