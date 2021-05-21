@@ -1,8 +1,7 @@
-﻿using System.ComponentModel.Design.Serialization;
-using System.Linq;
+﻿using System.Linq;
 using Restaurant.DAL.Entities;
 
-namespace Restaurant.DAL
+namespace Restaurant.DAL.Sql.EF
 {
     public static class Initializer
     {
