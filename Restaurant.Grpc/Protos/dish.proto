@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "Restaurant.Grpc.DishGrpcService";
+option csharp_namespace = "Restaurant.Grpc.GrpcServices";
 
 message DishProto {
   int32 Id = 1;
@@ -10,19 +10,58 @@ message DishProto {
   double Mass = 5;
   bool IsVegan = 6;
   bool IsPublished = 7;
+  CategoryProto Category = 8;
+}
+
+message DrinkProto {
+  int32 Id = 1;
+  string Name = 2;
+  double Price = 3;
+  string Description = 4;
+  double Volume = 5;
+  bool HasAlcohol = 6;
+  bool IsPublished = 7;
 }
 
 message CategoryProto {
   int32 Id = 1;
   string Name = 2;
   repeated DishProto Dishes = 3;
-  
 }
 
 message IngredientProto {
-  
+  int32 Id = 1;
+  string Name = 2;
 }
 
 service DishService {
-  
+  rpc AddDish(PostDishRequest) returns (PostDishResponse);
+  rpc DeleteDish(GetDishRequest) returns (PostDishResponse);
+  rpc GetAllDishes(GetAllDishesRequest) returns (GetAllDishesResponse);
+  rpc GetDish(GetDishRequest) returns (GetDishResponse);
+  rpc UpdateDish(PostDishRequest) returns (PostDishResponse);
+}
+
+message GetAllDishesRequest {}
+
+message GetAllDishesResponse {
+  repeated DishProto Dishes = 1;
+  string error = 2;
+}
+
+message GetDishRequest {
+  int32 id = 1;
+}
+
+message GetDishResponse {
+  DishProto Dish = 1;
+}
+
+message PostDishRequest {
+  DishProto Dish = 1;
+}
+
+message PostDishResponse {
+  bool success = 1;
+  string error = 2;
 }

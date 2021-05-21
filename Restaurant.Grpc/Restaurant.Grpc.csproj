@@ -5,15 +5,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
+        <Protobuf Include="Protos\dish.proto" GrpcServices="Server" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Grpc.AspNetCore" Version="2.34.0" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.37.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Restaurant.DAL\Restaurant.DAL.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Services" />
     </ItemGroup>
 
 </Project>
